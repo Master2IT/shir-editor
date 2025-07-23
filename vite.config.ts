@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import tailwindcss from "@tailwindcss/vite"
 
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
     // Development configuration
     if (command === 'serve') {
         return {
@@ -20,7 +20,29 @@ export default defineConfig(({ command }) => {
         }
     }
 
-    // Build configuration for library
+    // Demo build configuration (for preview and deployment)
+    if (mode === 'demo') {
+        return {
+            plugins: [react(), tailwindcss()],
+            resolve: {
+                alias: {
+                    "@": resolve(import.meta.dirname, "./src"),
+                },
+            },
+            base: '/ShirEditor/', // GitHub Pages base path
+            build: {
+                outDir: 'dist',
+                rollupOptions: {
+                    external: [],
+                    output: {
+                        manualChunks: undefined,
+                    },
+                },
+            },
+        }
+    }
+
+    // Library build configuration
     return {
         plugins: [react()],
         resolve: {
