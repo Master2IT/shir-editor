@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -116,5 +116,29 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Vazirmatn", sans-serif;
+    direction: rtl;
   }
+}
+
+.custom-editor h1,
+.custom-editor h1 span {
+  @apply !my-2 !text-2xl !font-bold;
+}
+
+.custom-editor h2,
+.custom-editor h2 span {
+  @apply !my-2 !text-xl !font-bold;
+}
+
+.custom-editor h3,
+.custom-editor h3 span {
+  @apply !my-2 !text-lg !font-bold;
+}
+
+.custom-editor a {
+  @apply cursor-pointer text-blue-500 underline;
+}
+.custom-editor-copy {
+  @apply absolute top-2 left-2 bg-white/5 rounded-md p-1;
 }

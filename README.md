@@ -2,6 +2,10 @@
 
 A beautiful, feature-rich RTL-friendly rich text editor component for React applications with Persian/Arabic language support.
 
+## 🏷️ Keywords
+
+`react` `typescript` `rtl` `persian` `arabic` `hebrew` `rich-text-editor` `wysiwyg` `text-editor` `tailwind-css` `contenteditable` `right-to-left` `farsi` `markdown` `toolbar` `formatting` `radix-ui` `accessibility` `responsive` `dark-mode` `i18n` `internationalization` `component-library` `npm-package` `vite` `rollup`
+
 ## ✨ Features
 
 - 🔄 **RTL Support** - Built-in right-to-left text direction support for Persian, Arabic, and Hebrew

@@ -2,14 +2,16 @@
   "name": "shireditor",
   "version": "1.0.2",
   "description": "",
-  "main": "./dist/my-ui.umd.js",
-  "module": "./dist/my-ui.es.js",
+  "main": "./dist/shir-editor.umd.js",
+  "module": "./dist/shir-editor.es.js",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "peerDependencies": {
     "react": "^18.0.0",
@@ -18,7 +20,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.14",
     "@radix-ui/react-select": "^2.2.5",
