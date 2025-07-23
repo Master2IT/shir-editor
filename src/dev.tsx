@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import CustomEditor from './components/index'
+import Editor from './components/index'
 import './index.css'
 import Provider from './components/provider'
+import { AlignModule } from './components/modules/align'
+import { BoldModule } from './components/modules/bold'
+import { ItalicModule } from './components/modules/italic'
+import { toJson } from './utils/to-json'
 
 function App() {
     const [content, setContent] = useState('<h1>Welcome to ShirEditor!</h1><p>Start editing here...</p>')
@@ -53,18 +57,33 @@ function App() {
 
                     <div className="border rounded-lg p-4 mb-8">
                         <h2 className="text-xl font-semibold mb-4">ویرایشگر</h2>
-                        <CustomEditor
+                        <Editor
                             value={content}
                             onChange={setContent}
                             className="min-h-[300px]"
+                        // config={{
+                        //     modules: [
+                        //         AlignModule,
+                        //         BoldModule,
+                        //         ItalicModule,
+                        //     ]
+                        // }}
                         />
                     </div>
 
-                    <div className="border rounded-lg p-4">
-                        <h2 className="text-xl font-semibold mb-4">خروجی HTML</h2>
-                        <pre className="bg-muted p-4 rounded text-sm overflow-auto">
-                            <code>{content}</code>
-                        </pre>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="border rounded-lg p-4">
+                            <h2 className="text-xl font-semibold mb-4">خروجی HTML</h2>
+                            <pre className="bg-muted p-4 rounded text-sm overflow-auto">
+                                <code>{content}</code>
+                            </pre>
+                        </div>
+                        <div className="border rounded-lg p-4" dir='ltr'>
+                            <h2 className="text-xl font-semibold mb-4">خروجی JSON</h2>
+                            <pre className="bg-muted p-4 rounded text-sm overflow-auto">
+                                <code>{JSON.stringify(toJson(content), null, 2)}</code>
+                            </pre>
+                        </div>
                     </div>
                 </div>
             </div>

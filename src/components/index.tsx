@@ -1,5 +1,6 @@
 import Provider from "./provider";
 import Editor from "./editor";
+import { EditorConfig } from "../types";
 
 /**
  * CustomEditor Component
@@ -27,10 +28,10 @@ import Editor from "./editor";
  * />
  * ```
  */
-const CustomEditor = ({ value, onChange, className }: { value: string, onChange: (value: string) => void, className?: string }) => {
+const CustomEditor = ({ value, onChange, className, config }: { value: string, onChange: (value: string) => void, className?: string, config?: EditorConfig }) => {
     return (
         <Provider>
-            <Editor value={value} onChange={onChange} className={className} />
+            <Editor value={value} onChange={onChange} className={className} config={config} />
         </Provider>
     )
 }

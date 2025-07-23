@@ -1,6 +1,6 @@
 {
   "name": "shireditor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "./dist/shir-editor.umd.js",
   "module": "./dist/shir-editor.es.js",
@@ -35,6 +35,7 @@
     "lucide-react": "^0.525.0",
     "next-themes": "^0.4.6",
     "react": "^18.0.0",
+    "react-color": "^2.19.3",
     "react-dom": "^18.0.0",
     "sonner": "^2.0.6",
     "tailwind-merge": "^3.3.1",
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@types/node": "^24.1.0",
     "@types/react": "^19.1.8",
+    "@types/react-color": "^3.0.13",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.7.0",
     "gh-pages": "^6.3.0",
