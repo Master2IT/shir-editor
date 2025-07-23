@@ -1,14 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import tailwindcss from "@tailwindcss/vite"
+
 
 export default defineConfig({
-    plugins: [react()],
+    plugins: [react(), tailwindcss()],
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        },
+    },
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
-            name: 'MyUI',
-            fileName: (format) => `my-ui.${format}.js`,
+            name: 'ShirEditor',
+            fileName: (format) => `shir-editor.${format}.js`,
         },
         rollupOptions: {
             external: ['react', 'react-dom'],
