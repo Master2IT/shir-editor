@@ -29,7 +29,7 @@ export default defineConfig(({ command, mode }) => {
                     "@": resolve(import.meta.dirname, "./src"),
                 },
             },
-            base: '/', // GitHub Pages base path
+            base: '/shir-editor/', // GitHub Pages base path
             build: {
                 outDir: 'dist',
                 rollupOptions: {
