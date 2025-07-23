@@ -1,6 +1,6 @@
 {
   "name": "shireditor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/my-ui.umd.js",
   "module": "./dist/my-ui.es.js",
