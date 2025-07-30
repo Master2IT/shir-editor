@@ -26,13 +26,13 @@ const ModularEditor: React.FC<EditorProps> = ({
                     }
                 }}
                 contentEditable
-                className="custom-editor p-4 min-h-[200px] !h-[calc(100%-53px)] !overflow-y-auto outline-none focus:ring-1 
+                className="custom-editor p-4 min-h-[200px] h-[300px] !overflow-y-auto outline-none focus:ring-1 
         focus:ring-ring rounded-b-md [&_a]:text-blue-500 [&_a]:underline [&_a]:cursor-pointer [&_*]
         :relative [&_*::before]:content-[attr(data-type)] [&_*::before]:absolute [&_*::before]:top-0 [&
         _*::before]:left-0 [&_*::before]:text-xs [&_*::before]:bg-gray-800 [&_*::before]:text-white [&
         _*::before]:px-1 [&_*::before]:rounded [&_*::before]:z-10 [&_*::before]:opacity-70 [&_h1]:my-2 [&
         _h1]:text-2xl [&_h1]:font-bold [&_h2]:my-2 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:my-2 [&_h3]
-        :text-lg [&_h3]:font-bold"
+        :text-lg [&_h3]:font-bold focus-visible:ring-neutral-300 dark:focus-visible:ring-neutral-700 focus-visible:shadow-sm transition-all duration-300"
                 onClick={(e) => {
                     const target = e.target as HTMLElement;
                     if (target.tagName === 'A' && e.ctrlKey) {

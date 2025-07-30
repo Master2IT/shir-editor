@@ -142,3 +142,27 @@
 .custom-editor-copy {
   @apply absolute top-2 left-2 bg-white/5 rounded-md p-1 cursor-pointer;
 }
+
+.custom-editor {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.custom-editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-editor::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.custom-editor::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.custom-editor::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.8);
+}

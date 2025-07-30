@@ -52,24 +52,20 @@ function App() {
                         </svg>
                     </button>
                 </div>
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl mx-auto space-y-5">
                     <h1 className="text-3xl font-bold mb-8 text-center">Shir Editor</h1>
-
-                    <div className="border rounded-lg p-4 mb-8">
-                        <h2 className="text-xl font-semibold mb-4">ویرایشگر</h2>
-                        <Editor
-                            value={content}
-                            onChange={setContent}
-                            className="min-h-[300px]"
-                        // config={{
-                        //     modules: [
-                        //         AlignModule,
-                        //         BoldModule,
-                        //         ItalicModule,
-                        //     ]
-                        // }}
-                        />
-                    </div>
+                    <Editor
+                        value={content}
+                        onChange={setContent}
+                        className="min-h-[300px]"
+                    // config={{
+                    //     modules: [
+                    //         AlignModule,
+                    //         BoldModule,
+                    //         ItalicModule,
+                    //     ]
+                    // }}
+                    />
 
                     <div className="grid grid-cols-2 gap-4">
                         <div className="border rounded-lg p-4">

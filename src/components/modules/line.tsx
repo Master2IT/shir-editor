@@ -24,7 +24,7 @@ export const LineComponent: React.FC<{ config?: LineModuleConfig }> = ({
         if (selection && selection.rangeCount > 0) {
             const range = selection.getRangeAt(0);
             const hr = document.createElement('hr');
-            hr.className = 'my-4 border-gray-300';
+            hr.className = 'my-4 border-neutral-200 dark:border-neutral-700';
 
             // Clear selection and insert HR
             range.deleteContents();
