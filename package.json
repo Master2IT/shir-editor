@@ -1,6 +1,6 @@
 {
   "name": "shireditor",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Shir Editor is a rich text editor built with React, Tailwind CSS, and shadcn/ui.",
   "main": "./dist/shireditor.umd.cjs",
   "module": "./dist/shireditor.js",
