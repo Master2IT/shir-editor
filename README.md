@@ -50,7 +50,7 @@ pnpm add shireditor
 
 ```tsx
 import React, { useState } from "react";
-import CustomEditor from "shireditor";
+import Editor from "shireditor";
 
 function App() {
   const [content, setContent] = useState("<p>سلام دنیا!</p>");
@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="container mx-auto p-4">
       <h1>My RTL Editor</h1>
-      <CustomEditor
+      <Editor
         value={content}
         onChange={(newContent) => setContent(newContent)}
         className="min-h-[400px]"
@@ -72,7 +72,7 @@ export default App;
 
 ## 📖 API Reference
 
-### CustomEditor Props
+### Editor Props
 
 | Prop        | Type                      | Required | Description                                   |
 | ----------- | ------------------------- | -------- | --------------------------------------------- |
@@ -85,16 +85,13 @@ export default App;
 #### Basic Usage
 
 ```tsx
-<CustomEditor
-  value={htmlContent}
-  onChange={(newValue) => setHtmlContent(newValue)}
-/>
+<Editor value={htmlContent} onChange={(newValue) => setHtmlContent(newValue)} />
 ```
 
 #### With Custom Styling
 
 ```tsx
-<CustomEditor
+<Editor
   value={htmlContent}
   onChange={(newValue) => setHtmlContent(newValue)}
   className="border-2 border-blue-500 rounded-lg shadow-lg min-h-[500px]"
@@ -112,7 +109,7 @@ const handleChange = (newContent: string) => {
   setIsValid(newContent.length > 10); // Minimum content validation
 };
 
-<CustomEditor
+<Editor
   value={content}
   onChange={handleChange}
   className={`${isValid ? "border-green-500" : "border-red-500"}`}
@@ -165,7 +162,7 @@ src/
 The editor uses Tailwind CSS classes and can be easily customized:
 
 ```tsx
-<CustomEditor
+<Editor
   value={content}
   onChange={setContent}
   className="
@@ -223,7 +220,7 @@ const persianContent = `
   <p>برای اطلاعات بیشتر به <a href="https://example.com">این لینک</a> مراجعه کنید.</p>
 `;
 
-<CustomEditor value={persianContent} onChange={setContent} />;
+<Editor value={persianContent} onChange={setContent} />;
 ```
 
 ### Mixed Content Example
