@@ -15,7 +15,7 @@ A beautiful, feature-rich RTL-friendly rich text editor component for React appl
 - 🎯 **Smart Navigation** - Ctrl+click to open links in new tabs
 - 📋 **Enhanced Paste** - Intelligent text pasting with proper formatting
 - 🎛️ **Comprehensive Toolbar** - Full-featured toolbar with all formatting options
-- 💎 **TypeScript Support** - Fully typed for better development experience
+- 💎 **TypeScript Support** - Fully typed with comprehensive declaration files for better development experience
 - 🎨 **Tailwind CSS** - Styled with Tailwind CSS for easy customization
 - 🌙 **Dark Mode Ready** - Compatible with dark/light theme switching
 - 📱 **Responsive Design** - Works perfectly on all screen sizes

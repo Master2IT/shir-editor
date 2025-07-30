@@ -1,10 +1,17 @@
 {
   "name": "shireditor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Shir Editor is a rich text editor built with React, Tailwind CSS, and shadcn/ui.",
-  "main": "./dist/shir-editor.umd.js",
-  "module": "./dist/shir-editor.es.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/shireditor.umd.js",
+  "module": "./dist/shireditor.js",
+  "types": "./dist/shireditor.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/shireditor.d.ts",
+      "import": "./dist/shireditor.js",
+      "require": "./dist/shireditor.umd.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -13,7 +20,7 @@
     "build": "vite build",
     "build:demo": "vite build --mode demo",
     "preview": "npm run build:demo && vite preview",
-    "deploy": "npm run build:demo && gh-pages -d dist",
+    "deploy": "gh-pages -d dist",
     "build:deploy": "npm run build:demo && npm run deploy"
   },
   "peerDependencies": {
@@ -52,6 +59,8 @@
     "rollup": "^4.45.1",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5.8.3",
-    "vite": "^7.0.5"
+    "vite": "^7.0.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-static-copy": "^3.1.1"
   }
 }

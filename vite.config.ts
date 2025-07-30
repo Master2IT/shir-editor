@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import tailwindcss from "@tailwindcss/vite"
+import dts from 'vite-plugin-dts'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig(({ command, mode }) => {
     // Development configuration
@@ -44,7 +46,23 @@ export default defineConfig(({ command, mode }) => {
 
     // Library build configuration
     return {
-        plugins: [react()],
+        plugins: [
+            react(),
+            dts({
+                include: ['src/**/*'],
+                outDir: 'dist',
+                insertTypesEntry: true,
+                rollupTypes: true,
+            }),
+            viteStaticCopy({
+                targets: [
+                    {
+                        src: 'README.md',
+                        dest: '.'
+                    }
+                ]
+            })
+        ],
         resolve: {
             alias: {
                 "@": resolve(import.meta.dirname, "./src"),
@@ -54,7 +72,8 @@ export default defineConfig(({ command, mode }) => {
             lib: {
                 entry: resolve(import.meta.dirname, 'src/index.ts'),
                 name: 'ShirEditor',
-                fileName: (format) => `shir-editor.${format}.js`,
+                fileName: 'shireditor',
+                formats: ['es', 'umd'],
             },
             rollupOptions: {
                 external: ['react', 'react-dom', 'tailwindcss'],
@@ -65,6 +84,7 @@ export default defineConfig(({ command, mode }) => {
                     },
                 },
             },
+            copyPublicDir: false,
         },
     }
 })
