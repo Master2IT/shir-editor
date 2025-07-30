@@ -2,6 +2,8 @@
 
 A beautiful, feature-rich RTL-friendly rich text editor component for React applications with Persian/Arabic language support.
 
+<img width="1895" height="907" alt="image" src="https://github.com/user-attachments/assets/fb3af12f-50b3-485f-9391-b9ca86a32291" />
+
 ## 🏷️ Keywords
 
 `react` `typescript` `rtl` `persian` `arabic` `hebrew` `rich-text-editor` `wysiwyg` `text-editor` `tailwind-css` `contenteditable` `right-to-left` `farsi` `markdown` `toolbar` `formatting` `radix-ui` `accessibility` `responsive` `dark-mode` `i18n` `internationalization` `component-library` `npm-package` `vite` `rollup`
