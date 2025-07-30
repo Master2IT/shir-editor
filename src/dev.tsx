@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import Editor from './components/index'
 import './index.css'
 import Provider from './components/provider'
-import { AlignModule } from './components/modules/align'
-import { BoldModule } from './components/modules/bold'
-import { ItalicModule } from './components/modules/italic'
+// import { AlignModule } from './components/modules/align'
+// import { BoldModule } from './components/modules/bold'
+// import { ItalicModule } from './components/modules/italic'
 import { toJson } from './utils/to-json'
 
 function App() {
